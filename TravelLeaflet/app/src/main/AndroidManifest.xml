@@ -20,7 +20,10 @@
         <activity
             android:name=".UserPages.MainActivities.UserMainActivity"
             android:label="@string/title_activity_user_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UserPages.LeafletActivities.LeafletMainActivity"
+            android:label="@string/title_activity_leaflet_main"></activity>
     </application>
 
 </manifest>
