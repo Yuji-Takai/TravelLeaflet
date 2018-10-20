@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "133808711603-mddieugrf1k1k7jslfof593vemn14v1v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.gatech.travelleaflet",
+            "certificate_hash": "cfab362bc34503086e197e2c4b69064e1981ddac"
+          }
+        },
+        {
           "client_id": "133808711603-osv0iar0ar38639dqqe89o76ui54a7ll.apps.googleusercontent.com",
           "client_type": 3
         }
