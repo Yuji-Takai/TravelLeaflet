@@ -17,7 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Authentication.SignupActivity" />
-        <activity android:name=".UserPages.UserDashboardActivity"></activity>
+        <activity
+            android:name=".UserPages.MainActivities.UserMainActivity"
+            android:label="@string/title_activity_user_main"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import edu.gatech.travelleaflet.R;
-import edu.gatech.travelleaflet.UserPages.UserDashboardActivity;
+import edu.gatech.travelleaflet.UserPages.MainActivities.UserMainActivity;
 
 public class LoginActivity extends AppCompatActivity {
     // widgets
@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
      */
     private void updateUI(int activity) {
         if (activity == LOGIN) {
-            Intent intent = new Intent(LoginActivity.this, UserDashboardActivity.class);
+            Intent intent = new Intent(LoginActivity.this, UserMainActivity.class);
             startActivity(intent);
         } else if (activity == SIGNUP) {
             Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
