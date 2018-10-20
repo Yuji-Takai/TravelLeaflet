@@ -24,12 +24,16 @@
     <string name="error_pw_mismatch">Enter the same password!</string>
     <string name="error_invalid_name">Enter your first and last name separated by a space!</string>
     <string name="error_empty_name">Enter your name!</string>
+<<<<<<< HEAD
+    <string name="title_activity_photo">PhotoActivity</string>
+=======
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+>>>>>>> 8ecb26c7aeaa2838f3bbe4890e8b453f5a946a24
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
