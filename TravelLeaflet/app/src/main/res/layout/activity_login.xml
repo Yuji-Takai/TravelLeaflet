@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:label="@string/prompt_login"
     tools:context=".Authentication.LoginActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/prompt_email"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
         android:layout_marginTop="50dp"
-        android:textStyle="bold" />
+        android:text="@string/prompt_email"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/emailField"
@@ -31,13 +31,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/prompt_pw"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:text="@string/prompt_pw"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/passwordField"
@@ -67,7 +66,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/prompt_signup"
         android:textAlignment="textEnd"
-        android:textColor="#002ccc"
+        android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
 

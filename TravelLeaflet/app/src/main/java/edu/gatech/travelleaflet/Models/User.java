@@ -3,13 +3,11 @@ import java.util.*;
 
 public class User {
     private String name;
-    private final int uid;
     private Set<User> friends;
     private List<Trip> trips;
 
-    public User(String name, int uid) {
+    public User(String name) {
         this.name = name;
-        this.uid = uid;
         friends = new HashSet<User>();
         trips = new ArrayList<Trip>();
     }
