@@ -4,6 +4,7 @@ import java.util.*;
 
 public class User implements Serializable {
     private String name;
+    private int tripCount;
     private Set<User> friends;
     private List<Trip> trips;
 
@@ -11,6 +12,7 @@ public class User implements Serializable {
 
     public User(String name) {
         this.name = name;
+        this.tripCount = 0;
         friends = new HashSet<User>();
         trips = new ArrayList<Trip>();
     }
@@ -22,6 +24,9 @@ public class User implements Serializable {
     public String getName() {
         return name;
     }
+
+    public void addTripCount() { this.tripCount++; }
+    public int getTripCount() { return tripCount; }
 
     public void addFriend(User user) {
         friends.add(user);
