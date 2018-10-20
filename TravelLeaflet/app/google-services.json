@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "133808711603",
+    "firebase_url": "https://travelleaflet-75dd7.firebaseio.com",
+    "project_id": "travelleaflet-75dd7",
+    "storage_bucket": "travelleaflet-75dd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133808711603:android:103e9da1061b81c2",
+        "android_client_info": {
+          "package_name": "edu.gatech.travelleaflet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133808711603-qk0alaef5h2li0id887bigcjdqe28t00.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.gatech.travelleaflet",
+            "certificate_hash": "790420326399b82bd57110d3483fd6d24c5ccb83"
+          }
+        },
+        {
+          "client_id": "133808711603-osv0iar0ar38639dqqe89o76ui54a7ll.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM8RrbXHJj3H5Lxnxo5bd4oPzGrj-kElw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133808711603-osv0iar0ar38639dqqe89o76ui54a7ll.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

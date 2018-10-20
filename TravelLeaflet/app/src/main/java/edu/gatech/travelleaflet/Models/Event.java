@@ -1,3 +1,5 @@
+import android.provider.Contacts;
+
 import java.util.*;
 
 public class Event{
@@ -6,7 +8,7 @@ public class Event{
     private Date end_time;
     private String activity;
     private String location;
-    private Set<Photos> photos;
+    private Set<Photo> photos;
     private String comment;
 
     public Event(int type, Date start_time, Date end_time, String activity, String location) {

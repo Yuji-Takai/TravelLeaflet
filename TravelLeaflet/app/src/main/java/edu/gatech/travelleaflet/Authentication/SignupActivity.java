@@ -1,13 +1,15 @@
-package edu.gatech.travelleaflet;
+package edu.gatech.travelleaflet.Authentication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class LoginActivity extends AppCompatActivity {
+import edu.gatech.travelleaflet.R;
+
+public class SignupActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_signup);
     }
 }
