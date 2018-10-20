@@ -25,6 +25,10 @@
             android:layout_height="100dp"
             android:orientation="vertical">
 
+            <ListView
+                android:id="@+id/current_trips"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
         </LinearLayout>
 
         <android.support.design.widget.FloatingActionButton
