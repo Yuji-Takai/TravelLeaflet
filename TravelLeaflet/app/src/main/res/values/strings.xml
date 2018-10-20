@@ -24,7 +24,7 @@
     <string name="error_pw_mismatch">Enter the same password!</string>
     <string name="error_invalid_name">Enter your first and last name separated by a space!</string>
     <string name="error_empty_name">Enter your name!</string>
-    <string name="title_activity_photo">PhotoActivity</string>
+    <string name="title_activity_photo">Add photo to event</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
