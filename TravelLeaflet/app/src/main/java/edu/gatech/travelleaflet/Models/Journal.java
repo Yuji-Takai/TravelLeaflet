@@ -2,9 +2,11 @@ package edu.gatech.travelleaflet.Models;
 import java.util.*;
 
 public class Journal {
-    private final User author;
-    private final int visibility;
-    private final List<Event> schedule;
+    private User author;
+    private int visibility;
+    private List<Event> schedule;
+
+    public Journal() { }
 
     public Journal(User author, int visibility, List<Event> schedule) {
         this.author = author;

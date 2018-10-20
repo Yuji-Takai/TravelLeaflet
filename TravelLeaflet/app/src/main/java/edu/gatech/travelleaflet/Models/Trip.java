@@ -9,6 +9,8 @@ public class Trip{
     private Date start;
     private Date end;
 
+    public Trip() { }
+
     public Trip(String city, Date start, Date end, User user) {
         this.city = city;
         this.start = start;

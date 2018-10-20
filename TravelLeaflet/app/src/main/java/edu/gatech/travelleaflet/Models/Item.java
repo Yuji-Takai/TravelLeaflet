@@ -4,6 +4,8 @@ public class Item {
     private String name;
     private int quantity;
 
+    public Item() { }
+
     public Item(int type, String name, int quantity) {
         this.type = type;
         this.name = name;

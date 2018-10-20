@@ -6,6 +6,8 @@ public class User {
     private Set<User> friends;
     private List<Trip> trips;
 
+    public User() { }
+
     public User(String name) {
         this.name = name;
         friends = new HashSet<User>();
