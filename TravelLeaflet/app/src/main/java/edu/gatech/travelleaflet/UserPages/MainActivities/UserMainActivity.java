@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -68,10 +69,6 @@ public class UserMainActivity extends AppCompatActivity
         userNameField = (TextView) headerView.findViewById(R.id.user_name);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Fragment fragment = DashboardFrag.newInstance();
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.content_frame, fragment);
-        ft.commit();
 
     }
 
@@ -129,6 +126,7 @@ public class UserMainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+
         int id = item.getItemId();
         Fragment fragment = null;
         if (id == R.id.nav_dashboard) {

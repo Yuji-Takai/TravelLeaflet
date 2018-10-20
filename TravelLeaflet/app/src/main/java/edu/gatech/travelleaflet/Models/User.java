@@ -1,7 +1,8 @@
 package edu.gatech.travelleaflet.Models;
+import java.io.Serializable;
 import java.util.*;
 
-public class User {
+public class User implements Serializable {
     private String name;
     private Set<User> friends;
     private List<Trip> trips;
