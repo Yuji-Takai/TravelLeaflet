@@ -24,6 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
@@ -45,6 +46,8 @@ public class PhotoActivity extends AppCompatActivity {
 
     private StorageReference mStorageRef;
     private DatabaseReference mDatabaseRef;
+
+    private StorageTask mUploadTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +73,11 @@ public class PhotoActivity extends AppCompatActivity {
         mButtonUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                uploadFile();
+                if (mUploadTask != null && mUploadTask.isInProgress()) {
+                    Toast.makeText(PhotoActivity.this, "Upload in progress", Toast.LENGTH_SHORT).show();
+                } else {
+                    uploadFile();
+                }
             }
         });
 
@@ -110,7 +117,7 @@ public class PhotoActivity extends AppCompatActivity {
         if (mImageUri != null) {
             StorageReference fileReference = mStorageRef.child(System.currentTimeMillis() + "." + getFileExtension(mImageUri));
 
-            fileReference.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            mUploadTask = fileReference.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                     Handler handler = new Handler();
@@ -119,9 +126,9 @@ public class PhotoActivity extends AppCompatActivity {
                         public void run() {
                             mProgressBar.setProgress(0);
                         }
-                    }, 5000);
+                    }, 1000);
                     Toast.makeText(PhotoActivity.this, "Upload successful", Toast.LENGTH_LONG).show();
-                    Photo photo = new Photo(mEditTextFileName.getText().toString().trim(), taskSnapshot.);
+                    Photo photo = new Photo(mEditTextFileName.getText().toString().trim());
 
                     String photoId = mDatabaseRef.push().getKey();
                     mDatabaseRef.child(photoId).setValue(photo);
