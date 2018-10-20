@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import edu.gatech.travelleaflet.R;
+
 public class LeafletMainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
@@ -17,13 +19,13 @@ public class LeafletMainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
+                case R.id.nav_schedule:
                     mTextMessage.setText(R.string.title_home);
                     return true;
-                case R.id.navigation_dashboard:
+                case R.id.nav_checklist:
                     mTextMessage.setText(R.string.title_dashboard);
                     return true;
-                case R.id.navigation_notifications:
+                case R.id.nav_album:
                     mTextMessage.setText(R.string.title_notifications);
                     return true;
             }

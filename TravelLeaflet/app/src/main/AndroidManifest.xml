@@ -19,24 +19,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".Authentication.SignupActivity" />
-<<<<<<< HEAD
-        <activity android:name=".UserPages.UserDashboardActivity" />
         <activity
             android:name=".Authentication.PhotoActivity"
-            android:label="@string/title_activity_photo"
-=======
+            android:label="@string/title_activity_photo" />
         <activity
             android:name=".UserPages.MainActivities.UserMainActivity"
             android:label="@string/title_activity_user_main"
-<<<<<<< HEAD
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".UserPages.LeafletActivities.LeafletMainActivity"
-            android:label="@string/title_activity_leaflet_main"></activity>
-=======
->>>>>>> 8ecb26c7aeaa2838f3bbe4890e8b453f5a946a24
-            android:theme="@style/AppTheme.NoActionBar"></activity>
->>>>>>> 4063f619b7dcb9ea127c285bfb706d5f2188fa07
+            android:label="@string/title_activity_leaflet_main" />
+
     </application>
 
 </manifest>
