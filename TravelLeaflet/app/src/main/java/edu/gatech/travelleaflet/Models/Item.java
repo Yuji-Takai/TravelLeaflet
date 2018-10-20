@@ -1,3 +1,4 @@
+package edu.gatech.travelleaflet.Models;
 public class Item {
     private int type;
     private String name;

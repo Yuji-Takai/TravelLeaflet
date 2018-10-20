@@ -1,5 +1,4 @@
-import android.provider.Contacts;
-
+package edu.gatech.travelleaflet.Models;
 import java.util.*;
 
 public class Event{

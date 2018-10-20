@@ -1,3 +1,4 @@
+package edu.gatech.travelleaflet.Models;
 import java.util.*;
 
 public class User {

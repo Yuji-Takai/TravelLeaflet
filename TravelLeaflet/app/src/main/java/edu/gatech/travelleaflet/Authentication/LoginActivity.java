@@ -16,8 +16,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import edu.gatech.travelleaflet.R;
 import edu.gatech.travelleaflet.UserPages.UserDashboardActivity;
@@ -32,8 +30,6 @@ public class LoginActivity extends AppCompatActivity {
     // Firebase Related Declaration
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
-    private FirebaseDatabase mDatabase;
-    private DatabaseReference mUserRef;
 
     // Constants
     final String TAG = "SignInActivity";
@@ -77,8 +73,6 @@ public class LoginActivity extends AppCompatActivity {
      */
     private void setUpFirebase() {
         mAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance();
-        mUserRef = mDatabase.getReference("user");
     }
 
     /**
