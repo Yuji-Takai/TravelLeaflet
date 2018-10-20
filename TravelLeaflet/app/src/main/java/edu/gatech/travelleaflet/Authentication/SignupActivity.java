@@ -21,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import edu.gatech.travelleaflet.Models.User;
 import edu.gatech.travelleaflet.R;
-import edu.gatech.travelleaflet.UserPages.UserDashboardActivity;
+import edu.gatech.travelleaflet.UserPages.MainActivities.UserMainActivity;
 
 public class SignupActivity extends AppCompatActivity {
     // Widgets
@@ -67,7 +67,7 @@ public class SignupActivity extends AppCompatActivity {
                                         DatabaseReference mUserRef = firebaseDatabase.getReference("user");
                                         // Adding the user to the database
                                         mUserRef.child(uid).setValue(new User(name));
-                                        Intent intent = new Intent(SignupActivity.this, UserDashboardActivity.class);
+                                        Intent intent = new Intent(SignupActivity.this, UserMainActivity.class);
                                         startActivity(intent);
                                     } else {
                                         // Sign Up Failed...

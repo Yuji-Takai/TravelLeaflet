@@ -19,10 +19,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".Authentication.SignupActivity" />
+<<<<<<< HEAD
         <activity android:name=".UserPages.UserDashboardActivity" />
         <activity
             android:name=".Authentication.PhotoActivity"
             android:label="@string/title_activity_photo"
+=======
+        <activity
+            android:name=".UserPages.MainActivities.UserMainActivity"
+            android:label="@string/title_activity_user_main"
+>>>>>>> 8ecb26c7aeaa2838f3bbe4890e8b453f5a946a24
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

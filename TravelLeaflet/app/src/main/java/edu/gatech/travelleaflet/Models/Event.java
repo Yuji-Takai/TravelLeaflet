@@ -11,6 +11,8 @@ public class Event{
     private Set<Photo> photos;
     private String comment;
 
+    public Event() { }
+
     public Event(int type, Date start_time, Date end_time, String activity, String location) {
         this.type = type;
         this.start_time = start_time;

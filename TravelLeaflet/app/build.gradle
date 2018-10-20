@@ -33,6 +33,10 @@ dependencies {
 
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support:support-vector-drawable:28.0.0'
+<<<<<<< HEAD
+=======
+    implementation 'com.android.support:design:28.0.0'
+>>>>>>> 8ecb26c7aeaa2838f3bbe4890e8b453f5a946a24
     implementation 'com.android.support:support-v4:28.0.0'
     testImplementation 'junit:junit:4.12'
     implementation 'com.google.firebase:firebase-core:16.0.4'

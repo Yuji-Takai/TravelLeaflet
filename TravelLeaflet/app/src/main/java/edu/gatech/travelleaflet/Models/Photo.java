@@ -1,8 +1,12 @@
 package edu.gatech.travelleaflet.Models;
 public class Photo {
+<<<<<<< HEAD
     private String name;
     private String url;
     private static int count = 0;
+=======
+    public Photo() { }
+>>>>>>> 8ecb26c7aeaa2838f3bbe4890e8b453f5a946a24
 
     public Photo() {}
 
