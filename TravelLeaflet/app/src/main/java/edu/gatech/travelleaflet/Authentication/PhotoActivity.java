@@ -106,7 +106,7 @@ public class PhotoActivity extends AppCompatActivity {
 
     private void uploadFile() {
         if (mImageUri != null) {
-            StorageReference fileReference = mStorageRef.child(System.currentTimeMillis() + "." + getFileExtension(mImageUri));
+            final StorageReference fileReference = mStorageRef.child(System.currentTimeMillis() + "." + getFileExtension(mImageUri));
 
             mUploadTask = fileReference.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
@@ -119,7 +119,7 @@ public class PhotoActivity extends AppCompatActivity {
                         }
                     }, 1000);
                     Toast.makeText(PhotoActivity.this, "Upload successful", Toast.LENGTH_LONG).show();
-                    Photo photo = new Photo(mEditTextFileName.getText().toString().trim());
+                    Photo photo = new Photo(mEditTextFileName.getText().toString().trim() + fileReference.getName());
 
                     String photoId = mDatabaseRef.push().getKey();
                     mDatabaseRef.child(photoId).setValue(photo);
