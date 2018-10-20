@@ -34,4 +34,5 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_leaflet_main">LeafletMainActivity</string>
+    <string name="title_activity_leaflet_checklist">Item-to-bring Checklist</string>
 </resources>

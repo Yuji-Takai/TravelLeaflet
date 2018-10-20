@@ -21,6 +21,14 @@ public class Trip{
         tripmates.add(user);
     }
 
+    public List<Event> getSchedule() {
+        return schedule;
+    }
+
+    public List<Item> getItems() {
+        return checkList;
+    }
+
     public void addEvent(Event e) {
         schedule.add(e);
     }
