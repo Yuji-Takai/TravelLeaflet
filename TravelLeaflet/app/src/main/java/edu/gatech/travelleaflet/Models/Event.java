@@ -72,6 +72,6 @@ public class Event{
     }
 
     public void removePhoto(Photo photo) {
-        photo.remove(photo);
+        photos.remove(photo);
     }
 }
