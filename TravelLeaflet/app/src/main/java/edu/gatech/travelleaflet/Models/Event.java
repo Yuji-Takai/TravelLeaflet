@@ -1,5 +1,6 @@
 package edu.gatech.travelleaflet.Models;
 import java.util.*;
+import edu.gatech.travelleaflet.Models.Photo;
 
 public class Event{
     private int type;
