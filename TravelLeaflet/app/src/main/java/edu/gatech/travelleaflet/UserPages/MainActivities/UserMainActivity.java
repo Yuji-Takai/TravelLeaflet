@@ -67,6 +67,12 @@ public class UserMainActivity extends AppCompatActivity
         View headerView = navigationView.inflateHeaderView(R.layout.nav_header_user_main);
         userNameField = (TextView) headerView.findViewById(R.id.user_name);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Fragment fragment = DashboardFrag.newInstance();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.content_frame, fragment);
+        ft.commit();
+
     }
 
     @Override
