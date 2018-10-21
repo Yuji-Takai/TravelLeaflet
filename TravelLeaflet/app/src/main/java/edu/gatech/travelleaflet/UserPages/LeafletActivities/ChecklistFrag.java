@@ -14,13 +14,8 @@ import java.util.List;
 import edu.gatech.travelleaflet.Models.Item;
 import edu.gatech.travelleaflet.R;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-public class ChecklistFrag extends Fragment {
-    private String tripId;
-=======
-=======
->>>>>>> a8aa1f6eb620632e245e07710f51425092e882c4
+
+
 public class ChecklistFrag extends Fragment implements AddItem.OnItemListener{
 
     @Override
@@ -31,23 +26,13 @@ public class ChecklistFrag extends Fragment implements AddItem.OnItemListener{
     private Button addItem;
     private List<Item> checklist;
 
-<<<<<<< HEAD
->>>>>>> a8aa1f6eb620632e245e07710f51425092e882c4
-=======
->>>>>>> a8aa1f6eb620632e245e07710f51425092e882c4
+
     public ChecklistFrag() {
         // Required empty public constructor
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     public static ChecklistFrag newInstance(String tripId) {
-=======
-=======
->>>>>>> a8aa1f6eb620632e245e07710f51425092e882c4
-    public static ChecklistFrag newInstance() {
->>>>>>> a8aa1f6eb620632e245e07710f51425092e882c4
         ChecklistFrag fragment = new ChecklistFrag();
         Bundle args = new Bundle();
         args.putString("tripId", tripId);

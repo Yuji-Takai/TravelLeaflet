@@ -22,24 +22,11 @@ public class Trip{
         tripmates.add(userid);
     }
 
-<<<<<<< HEAD
+
     public List<Event> getSchedule() { return this.schedule; }
-=======
-    public List<Event> getSchedule() {
-        return schedule;
-    }
 
     public List<Item> getItems() {
-        return checkList;
-    }
->>>>>>> a8aa1f6eb620632e245e07710f51425092e882c4
-
-    public List<Event> getSchedule() {
-        return schedule;
-    }
-
-    public List<Item> getItems() {
-        return checkList;
+        return this.checkList;
     }
 
     public void addEvent(Event e) {
