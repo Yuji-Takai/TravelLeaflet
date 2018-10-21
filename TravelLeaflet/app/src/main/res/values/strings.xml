@@ -35,4 +35,18 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_leaflet_main">LeafletMainActivity</string>
     <string name="title_activity_leaflet_checklist">Item-to-bring Checklist</string>
+    <string name="item_type">Type</string>
+    <string name="item_name">Name</string>
+    <string name="item_count">Count</string>
+    <string name="add">Add</string>
+
+    <string-array name="item_type_arrays">
+        <item>Toiletry</item>
+        <item>Electronics</item>
+        <item>Tickets</item>
+        <item>Documents</item>
+        <item>Cloths</item>
+        <item>Others</item>
+    </string-array>
+
 </resources>
