@@ -75,23 +75,10 @@ public class UserMainActivity extends AppCompatActivity
     @Override
     protected void onStart() {
         super.onStart();
-        ValueEventListener userListener = new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                User user = dataSnapshot.getValue(User.class);
-                userNameField.setText(user.getName());
-                Fragment dashboardFragment = DashboardFrag.newInstance();
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.content_frame, dashboardFragment);
-                ft.commit();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        };
-        mUserRef.addValueEventListener(userListener);
+        Fragment dashboardFragment = DashboardFrag.newInstance();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.content_frame, dashboardFragment);
+        ft.commit();
     }
 
     /**

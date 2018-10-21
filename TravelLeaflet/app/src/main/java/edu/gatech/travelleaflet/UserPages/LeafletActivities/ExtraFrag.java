@@ -10,13 +10,16 @@ import edu.gatech.travelleaflet.R;
 
 
 public class ExtraFrag extends Fragment {
-
+    private String tripId;
     public ExtraFrag() {
         // Required empty public constructor
     }
 
-    public static ExtraFrag newInstance() {
+    public static ExtraFrag newInstance(String tripId) {
         ExtraFrag fragment = new ExtraFrag();
+        Bundle args = new Bundle();
+        args.putString("tripId", tripId);
+        fragment.setArguments(args);
         return fragment;
     }
 

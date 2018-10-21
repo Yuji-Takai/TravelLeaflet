@@ -12,17 +12,25 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+<<<<<<< HEAD
+=======
+import com.google.firebase.auth.FirebaseAuth;
+>>>>>>> 777731d788c0aee71c7df8bcfb4b9245e5a992f7
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 
 import edu.gatech.travelleaflet.Models.Trip;
+=======
+>>>>>>> 777731d788c0aee71c7df8bcfb4b9245e5a992f7
 import edu.gatech.travelleaflet.Models.User;
 import edu.gatech.travelleaflet.R;
+import edu.gatech.travelleaflet.UserPages.LeafletActivities.AddEventActivity;
 import edu.gatech.travelleaflet.UserPages.LeafletActivities.LeafletMainActivity;
 
 
@@ -56,8 +64,24 @@ public class DashboardFrag extends Fragment {
         addTripBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), LeafletMainActivity.class);
-                startActivity(intent);
+                FirebaseAuth mAuth = FirebaseAuth.getInstance();
+                String uid = mAuth.getCurrentUser().getUid();
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference mUserRef = database.getReference("user");
+                mUserRef.child(uid).addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        User user = dataSnapshot.getValue(User.class);
+                        Intent intent = new Intent(getActivity(), AddEventActivity.class);
+                        intent.putExtra("tripCount", user.getTripCount());
+                        startActivity(intent);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
             }
         });
 
