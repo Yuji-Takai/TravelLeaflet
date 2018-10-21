@@ -3,6 +3,7 @@ public class Item {
     private int type;
     private String name;
     private int quantity;
+    private boolean isChecked;
 
     public Item() { }
 
@@ -10,6 +11,7 @@ public class Item {
         this.type = type;
         this.name = name;
         this.quantity = quantity;
+        isChecked = false;
     }
 
     public void setType(int type) {
@@ -34,5 +36,13 @@ public class Item {
 
     public int getQuantity() {
         return quantity;
+    }
+
+    public void setChecked(boolean checked) {
+        isChecked = checked;
+    }
+
+    public boolean isChecked() {
+        return isChecked;
     }
 }

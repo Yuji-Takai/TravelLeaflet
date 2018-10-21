@@ -5,16 +5,16 @@ import java.util.*;
 public class User implements Serializable {
     private String name;
     private int tripCount;
-    private Set<User> friends;
-    private List<Trip> trips;
+    private List<String> friends;
+    private List<String> trips;
 
     public User() { }
 
     public User(String name) {
         this.name = name;
         this.tripCount = 0;
-        friends = new HashSet<User>();
-        trips = new ArrayList<Trip>();
+        friends = new ArrayList<String>();
+        trips = new ArrayList<String>();
     }
 
     public void setName(String name) {
@@ -28,19 +28,22 @@ public class User implements Serializable {
     public void addTripCount() { this.tripCount++; }
     public int getTripCount() { return tripCount; }
 
-    public void addFriend(User user) {
+    public void addFriend(String user) {
         friends.add(user);
     }
 
-    public void removeFriend(User user) {
+    public void removeFriend(String user) {
         friends.remove(user);
     }
 
-    public void addTrip(Trip trip) {
+    public List<String> getTrips() { return trips;}
+    public void setTrips(List<String> trips) {this.trips = trips;}
+
+    public void addTrip(String trip) {
         trips.add(trip);
     }
 
-    public void removeTrip(Trip trip) {
+    public void removeTrip(String trip) {
         trips.remove(trip);
     }
 }

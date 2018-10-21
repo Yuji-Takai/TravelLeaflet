@@ -11,11 +11,16 @@ import android.view.ViewGroup;
 import edu.gatech.travelleaflet.R;
 
 public class AlbumFrag extends Fragment {
+    private String tripId;
+
     public AlbumFrag() {
         // Required empty public constructor
     }
-    public static AlbumFrag newInstance() {
+    public static AlbumFrag newInstance(String tripId) {
         AlbumFrag fragment = new AlbumFrag();
+        Bundle args = new Bundle();
+        args.putString("tripId", tripId);
+        fragment.setArguments(args);
         return fragment;
     }
 

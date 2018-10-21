@@ -1,5 +1,6 @@
 package edu.gatech.travelleaflet.UserPages.LeafletActivities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -33,13 +34,13 @@ public class LeafletMainActivity extends AppCompatActivity {
             int id = item.getItemId();
             Fragment fragment = null;
             if (id == R.id.nav_schedule) {
-                fragment = ScheduleFrag.newInstance();
+                fragment = ScheduleFrag.newInstance(tripId);
             } else if (id == R.id.nav_checklist) {
-                fragment = ChecklistFrag.newInstance();
+                fragment = ChecklistFrag.newInstance(tripId);
             } else if (id == R.id.nav_album) {
-                fragment = AlbumFrag.newInstance();
+                fragment = AlbumFrag.newInstance(tripId);
             } else if (id == R.id.nav_extra) {
-                fragment = ExtraFrag.newInstance();
+                fragment = ExtraFrag.newInstance(tripId);
             }
             if (fragment != null) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -56,6 +57,8 @@ public class LeafletMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaflet_main);
 
+        Intent intent = getIntent();
+        tripId = intent.getStringExtra("tripId");
 
 
         setUpFirebase();
@@ -64,7 +67,7 @@ public class LeafletMainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
 
-        Fragment fragment = ScheduleFrag.newInstance();
+        Fragment fragment = ScheduleFrag.newInstance(tripId);
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.fragment_container, fragment);
         ft.commit();

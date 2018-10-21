@@ -19,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import edu.gatech.travelleaflet.Models.User;
 import edu.gatech.travelleaflet.R;
+import edu.gatech.travelleaflet.UserPages.LeafletActivities.AddEventActivity;
 import edu.gatech.travelleaflet.UserPages.LeafletActivities.LeafletMainActivity;
 
 
@@ -55,7 +56,7 @@ public class DashboardFrag extends Fragment {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         User user = dataSnapshot.getValue(User.class);
-                        Intent intent = new Intent(getActivity(), LeafletMainActivity.class);
+                        Intent intent = new Intent(getActivity(), AddEventActivity.class);
                         intent.putExtra("tripCount", user.getTripCount());
                         startActivity(intent);
                     }

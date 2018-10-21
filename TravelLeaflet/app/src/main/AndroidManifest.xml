@@ -29,6 +29,7 @@
         <activity
             android:name=".UserPages.LeafletActivities.LeafletMainActivity"
             android:label="@string/title_activity_leaflet_main" />
+        <activity android:name=".UserPages.LeafletActivities.AddEventActivity"></activity>
     </application>
 
 </manifest>
